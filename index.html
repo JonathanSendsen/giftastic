@@ -1,48 +1,53 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Giftastic!</title>
-    <!-- Linking my style.css relative path -->
-    <link rel="stylesheet" type="text/css" href="../giftastic/assets/style.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-<!-- Header  -->
-<div class="jumbotron">
-    <div class="container">
-        <h1>Actions Search</h1>
-    </div>
-</div>
-<!-- Buttons  -->
-<div id="gifButtonsView" class="container">
-</div>
- <!-- Main Container  -->
-<div class="container">
-    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-        <!-- Gifs  -->
-        <div id="gifsView"></div>
-    </div>
-     <!-- Action Submission Form  -->
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <form id="gif-form" role="form">
-            <h2><legend>Action Submission</legend></h2>
-            <div class="form-group">
-                <label for="action-input">Add your action below</label>
-                <input type="text" id="action-input">
-            </div>
-            <input id="addGif" type="submit" value="Add your action" class="btn btn-primary">
-            <input id="removeGif" type="submit" value="Remove last action" class="btn btn-primary">
-        </form>    
-    </div>
-</div>
-<footer>
-    <div id="footer" class="container">
-        <h4 id="copyright">&copy; Copyright 2018 Jonathan Sendsen</h4>
-    </div>
-</footer>
-<!--Linking my gif.js relative path-->
-<script src="../giftastic/assets/gif.js"></script>    
-
-</body>
-
+<html lang="en">
+  <head>
+    <title>HW Giftastic! </title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!-- Styling component-->
+    <link rel="stylesheet" type="text/css" href="../giftastic/assets/style.css">		
+  </head>
+  <body>
+    <div class="container-fluid" id="wrap">
+	    <!-- Nav Area with Title 100% -->
+	    <div class="row">
+	    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="header">
+	    		<h3 id="title">Giftastic!</h3>
+	    	</div>
+	    </div>
+		<!-- Button Area 100% -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="buttonArea"></div>
+		</div>
+		<!-- Gif Area 9 cols -->
+		<div class="row">
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" id="gifArea"></div>
+		<!-- Input Area 3 cols -->		
+			<div class="col-xs-3 col-sm-3 col-md-3col-lg-3">
+				<form>
+				  <fieldset>
+				  	<label for="topic-input">Add a topic</label><br>
+				    <input type="text" placeholder="Type something…" id="topic-input">
+				    <button type="submit" class="btn submit" data="submitBtn">Submit</button>
+				  </fieldset>
+				</form>
+			</div>
+		</div>	
+	</div>
+		<!-- Footer -->
+		<footer class="footer">
+      		<div class="container">
+        		<span class="credits">Giftastic! By Jonathan Sendsen</span>
+      		</div>
+    	</footer>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!--Linking js file-->
+    <script src="../giftastic/assets/gif.js"></script>
+  </body>
 </html>
+
+#
