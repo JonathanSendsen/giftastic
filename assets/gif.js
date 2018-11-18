@@ -18,7 +18,7 @@ var buttonGenerator = function (){
 $("#buttonArea").on("click", ".btn", function(){
   		var thing = $(this).attr("data");
   		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + thing + "&api_key=dc6zaTOxFJmzC&limit=10";
-
+		//Api Call using ajax.
   		$.ajax({
   			url: queryURL,
   			method: "GET" 
@@ -56,7 +56,6 @@ $("#buttonArea").on("click", ".btn", function(){
  			}
   		})
   })
-
 // When the user clicks one of the still GIPHY images, and it animates. When the user clicks the gif again, it stops playing.
 $("#gifArea").on("click", ".gif", function(event){
 	event.preventDefault();
@@ -76,7 +75,6 @@ $("#gifArea").on("click", ".gif", function(event){
 })
    
 // The form takes the value from the input box and adds it into the topics  array. The buttonGenerator function is called that takes each topic in the array remakes the buttons on the page.
-
 $(".submit").on("click", function(event){
 	event.preventDefault();
 
