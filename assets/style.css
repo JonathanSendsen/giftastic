@@ -70,3 +70,7 @@ html {
   .clear {
       clear:both;
   }
+
+  h5 {
+      color: #fff
+  }
