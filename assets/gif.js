@@ -1,5 +1,5 @@
 // GIFTASTIC! 
-var topics = ["Captain Planet", "South Park", "Recess", "Spongebob", "He-Man", "Powdered Toast Man", "Transformers", "Yogi Bear", "Homer Simpson", "Family Guy", "South Park", "Scooby-Doo", "Adventure Time"];
+var topics = ["Captain Planet", "South Park", "Recess", "Spongebob", "Ren & Stimpy", "The PowerPuff Girls", "Dexter's Laboratory", "Transformers", "Simpsons", "Family Guy", "Scooby-Doo", "Rugrats", "Pinky and the Brain"];
 
 var button;
 var newTopic = ""; // new topic that will be added via the input field 
@@ -15,13 +15,10 @@ var buttonGenerator = function (){
 	};
 }
 
-
 // The user clicks on a generated orange button, which generates 10 static, non-animated gif images from the GIPHY API and places them on the page. 
 $("#buttonArea").on("click", ".btn", function(){
   		var thing = $(this).attr("data");
   		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + thing + "&api_key=dc6zaTOxFJmzC&limit=10";
-
-
 
   		$.ajax({
   			url: queryURL,
@@ -61,7 +58,6 @@ $("#buttonArea").on("click", ".btn", function(){
   		})
   })
 
-
 // When the user clicks one of the still GIPHY images, and it animates. When the user clicks the gif again, it stops playing.
 $("#gifArea").on("click", ".gif", function(event){
 	event.preventDefault();
@@ -80,9 +76,7 @@ $("#gifArea").on("click", ".gif", function(event){
 
 })
    
-
 // The form takes the value from the input box and adds it into the topics  array. The buttonGenerator function is called that takes each topic in the array remakes the buttons on the page.
-
 
 $(".submit").on("click", function(event){
 	event.preventDefault();
@@ -96,7 +90,5 @@ $(".submit").on("click", function(event){
 	// call the function that creates the new button
 	buttonGenerator();
 });
-
-
 
 buttonGenerator();
